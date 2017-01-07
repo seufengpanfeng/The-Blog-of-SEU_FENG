@@ -1,5 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/rili/skin/jedate.css">
+<script src="${pageContext.request.contextPath}/static/rili/jedate.js"></script>
+
 
 <div class="data_list">
 	<div class="data_list_title">
@@ -15,7 +18,21 @@
 	<%-- <div class="visitNum">访问量：6666</div>  --%>
 	<div class="userSign">『<strong><font style="color: #EE6A50">${blogger.sign }</font></strong>』</div>
 </div>
+<!-- 以下是日历 -->
 
+<!-- <div style="width:100%;height:1000px;"> -->
+<div class="data_list">
+	<div class="data_list_title">
+	<img
+			src="${pageContext.request.contextPath}/static/images/byDate_icon.png" />
+	当前日期
+	<div class="datas">
+	<p class="datep"><input class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly></p>
+	</div>
+	</div>
+</div>
+
+<!-- *************************** -->
 <div class="data_list">
 	<div class="data_list_title">
 		<img

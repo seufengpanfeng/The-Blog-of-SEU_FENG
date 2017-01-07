@@ -49,6 +49,7 @@ public class BloggerAdminController {
 			Blogger blogger,
 			HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
+		//System.out.println("是这里");
 		
 		if(!imageFile.isEmpty()) { //如果用户有传过照片，就更新
 			String filePath = request.getServletContext().getRealPath("/"); //获取服务器根路径
@@ -61,8 +62,10 @@ public class BloggerAdminController {
 		int resultTotal = bloggerService.updateBlogger(blogger);
 		JSONObject result = new JSONObject();
 		if(resultTotal > 0) {
+			System.out.println("更改了");
 			result.put("success", true);
 		} else {
+			System.out.println("没更改");
 			result.put("success", false);
 		}
 		ResponseUtil.write(response, result);

@@ -25,6 +25,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="updateBlogger" parameterType="Blogger">
 		update t_blogger
 		<set>
+			<if test="username!=null and username!=''">
+		 		username=#{username},
+		 	</if>
 			<if test="nickname!=null and nickname!=''">
 		 		nickname=#{nickname},
 		 	</if>

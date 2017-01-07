@@ -50,7 +50,8 @@
 					<td width="80px">用户名：</td>				
 					<td>
 						<input type="hidden" id="id" name="id" value="${blogger.id }"/>
-						<input type="text" id="username" name="username" style="width:200px" readonly="readonly" value="${blogger.username }"/>
+						<input type="text" id="username" name="username" style="width:200px" value="${blogger.username }"/>
+						<!--<input type="text" id="username" name="username" style="width:200px" readonly="readonly" value="${blogger.username }"/>  -->
 					</td>
 				</tr>
 				<tr>
