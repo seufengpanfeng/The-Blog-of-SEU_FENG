@@ -40,7 +40,7 @@ public class BlogTypeAdminController {
 			@RequestParam(value = "page", required = false) String page,
 			@RequestParam(value = "rows", required = false) String rows,
 			HttpServletResponse response) throws Exception {
-
+		System.out.println("博客类别list");
 		PageBean pageBean = new PageBean(Integer.parseInt(page),
 				Integer.parseInt(rows));
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -62,7 +62,7 @@ public class BlogTypeAdminController {
 	@RequestMapping("/save")
 	public String save(BlogType blogType, HttpServletResponse response)
 			throws Exception {
-
+		System.out.println("博客类别save");
 		int resultTotal = 0; // 接收返回结果记录数
 		if (blogType.getId() == null) { // 说明是第一次插入
 			resultTotal = blogTypeService.addBlogType(blogType);
@@ -85,7 +85,7 @@ public class BlogTypeAdminController {
 	public String deleteBlog(
 			@RequestParam(value = "ids", required = false) String ids,
 			HttpServletResponse response) throws Exception {
-
+		System.out.println("博客类别delete");
 		String[] idsStr = ids.split(",");
 		JSONObject result = new JSONObject();
 		for (int i = 0; i < idsStr.length; i++) {
